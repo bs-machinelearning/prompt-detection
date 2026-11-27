@@ -1,0 +1,20 @@
+[project]
+name = "prompt-detection"
+version = "0.1.0"
+description = "Prompt-injection detection experiments and demo"
+requires-python = ">=3.11"
+dependencies = ["datasets>=3,<5"]
+
+[dependency-groups]
+dev = ["ruff>=0.15.0,<0.16"]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "COM812", # Conflicts with the formatter.
+    "D203",   # Conflicts with D211.
+    "D213",   # Conflicts with D212.
+]
